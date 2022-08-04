@@ -27,4 +27,60 @@ class Produtos extends CI_Controller {
 
 		$this->load->view('listarprodutos', $data);
 	}
+
+	public function add() {
+		//carrega o model Produtos
+		$this->load->model('produtos_model', 'produtos');
+
+		//carrega a view
+		$this->load->view('addprodutos');
+	}
+
+	public function salvar() {
+		if($this->input->post('nome')==NULL) {
+			echo 'O campo usuário é obrigatório';
+			echo '<a href="/crud/produtos/add">Voltar</a>';
+		}else{
+			$this->load->model('produtos_model', 'produtos');
+
+			$dados['id'] = $this->input->post("id");
+			$dados['nome'] = $this->input->post("nome");
+			$dados['senha'] = $this->input->post("senha");
+			$dados['foto'] = $this->input->post("foto");
+
+			$this->produtos->addProduto($dados);
+
+			redirect('http://localhost/crud/');
+		}
+	}
+
+
+	public function editar($id=NULL){
+		if($id==NULL) {
+			redirect('http://localhost/crud/');
+		}
+
+		$this->load->model('produtos_model', 'produtos');
+
+		$query = $this->produtos->getProdutoById($id);
+
+		if($query==NULL){
+			redirect('http://localhost/crud/');
+		}
+		
+
+		$dados['loja'] = $query;
+		
+		//obs: aqui eu copiei da função getprodutos para visualizá-los na página editarprodutos.php
+		$data['produtos'] = $this->produtos->getProdutos();
+		$this->load->view('editarprodutos', $data);
+		//fim da obs
+
+
+		$this->load->view('editarprodutos', $dados);
+
+
+
+
+	}
 }

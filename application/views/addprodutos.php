@@ -22,45 +22,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título da página</title>
+    <title>Novo cadastro</title>
     <meta charset="utf-8">
   </head>
   <body>
+
+  
     <div class="container">
 
 		<div class="row">
-			<h1>Lista de produtos</h1>
-			<a href="/crud/produtos/add" class="btn btn-primary">Novo produto</a>
+			<h1>Novo produto</h1>
+			<a href="/crud" >Voltar para o início</a>
 
+      <form action="/crud/produtos/salvar" name="form_add" method="post">
+  <div class="form-group" >
+    <label for="exampleInputEmail1">Usuário</label>
+    <input type="text" name="id" class="form-control"  placeholder="id">
+    
+  </div>
+  <div class="form-group" >
+    <label for="exampleInputEmail1">Usuário</label>
+    <input type="text" name="nome" class="form-control"  placeholder="nome">
+    
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputPassword1">Senha</label>
+    <input type="text" name="senha" class="form-control"  placeholder="senha">
+  </div>
 
-			<table>
-				<tr>
-					<td>Id</td>
-					<td class="text-center">nome</td>
-					<td class="text-center">Senha</td>
-					<td class="text-center">Foto</td>
-				</tr>
+  <div class="form-group" >
+    <label for="exampleInputEmail1">Usuário</label>
+    <input type="text" name="foto" class="form-control"  placeholder="foto">
+    
+  </div>
 
-			
-			
-			<?php
-			$contador = 0;
-			foreach($produtos as $produto) {
-				echo '<tr>';
-				echo '<td class="text-left">'.$produto->id.'</td>';
-				echo '<td class="text-center">'.$produto->nome.'</td>';
-				echo '<td class="text-center">'.$produto->senha.'</td>';
-				echo '<td class="text-center">'.$produto->foto.'</td>';
-				echo '<td class="text-left;"><a href="produtos/editar/'.$produto->id.'">Editar </a></td>';
-				echo '<td class="text-left;"><a href="#">Apagar </a></td>';
-				echo '<td class="text-left;"><a href="#">Enviar foto </a></td>';
-				echo '</tr>';
-				
-			}
-
-			?>
-
-			</table>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 		</div>
 	</div>
   </body>
