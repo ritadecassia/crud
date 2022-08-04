@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
   </div>
   <div class="form-group" >
-    <label for="exampleInputEmail1">Usuário</label>
+    <label for="exampleInputEmail1">Nome</label>
     <input type="text" name="nome" class="form-control"  placeholder="nome">
     
   </div>
@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
 
   <div class="form-group" >
-    <label for="exampleInputEmail1">Usuário</label>
+    <label for="exampleInputEmail1">Foto</label>
     <input type="text" name="foto" class="form-control"  placeholder="foto">
     
   </div>

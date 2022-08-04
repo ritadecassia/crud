@@ -71,10 +71,7 @@ class Produtos extends CI_Controller {
 
 		$dados['loja'] = $query;
 		
-		//obs: aqui eu copiei da função getprodutos para visualizá-los na página editarprodutos.php
-		$data['produtos'] = $this->produtos->getProdutos();
-		$this->load->view('editarprodutos', $data);
-		//fim da obs
+	
 
 
 		$this->load->view('editarprodutos', $dados);
