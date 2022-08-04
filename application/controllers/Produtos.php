@@ -71,10 +71,10 @@ class Produtos extends CI_Controller {
 
 		$dados['loja'] = $query;
 		
-	
-
 
 		$this->load->view('editarprodutos', $dados);
+
+		
 
 
 

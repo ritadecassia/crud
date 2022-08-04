@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta charset="utf-8">
   </head>
   <body>
-
+ 
 
     <div class="container">
 
@@ -37,23 +37,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <form action="/crud/produtos/editar/" name="form_add" method="post">
   <div class="form-group" >
     <label for="exampleInputEmail1">Id</label>
-    <input type="text" name="id" value="" class="form-control"  placeholder="id">
+    <input type="text" name="id" value="<?php print_r($loja->id); ?>" class="form-control"  >
     
   </div>
   <div class="form-group" >
     <label for="exampleInputEmail1">Nome</label>
-    <input type="text" name="nome" class="form-control"  placeholder="nome">
+    <input type="text" name="nome"  class="form-control" value="<?php print_r($loja->nome); ?>"   placeholder="nome">
     
   </div>
   
   <div class="form-group">
     <label for="exampleInputPassword1">Senha</label>
-    <input type="text" name="senha" class="form-control"  placeholder="senha">
+    <input type="text" name="senha" class="form-control" value="<?php print_r($loja->senha); ?>"   placeholder="senha">
   </div>
 
   <div class="form-group" >
     <label for="exampleInputEmail1">Foto</label>
-    <input type="text" name="foto" class="form-control"  placeholder="foto">
+    <input type="text" name="foto" value="<?php print_r($loja->foto); ?>"  class="form-control"  placeholder="foto">
     
   </div>
 

@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$contador = 0;
 			foreach($produtos as $produto) {
 				echo '<tr>';
-				echo '<td class="text-left">'.$produto->id.'</td>';
+				echo '<td class="text-left" >'.$produto->id.'</td>';
 				echo '<td class="text-center">'.$produto->nome.'</td>';
 				echo '<td class="text-center">'.$produto->senha.'</td>';
 				echo '<td class="text-center">'.$produto->foto.'</td>';
@@ -55,6 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				echo '<td class="text-left;"><a href="#">Apagar </a></td>';
 				echo '<td class="text-left;"><a href="#">Enviar foto </a></td>';
 				echo '</tr>';
+
 				
 			}
 
